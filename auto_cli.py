@@ -46,4 +46,4 @@ def auto_cli(live_vars, src_file):
         arg = getattr(args, param_name)
         if arg is not None:
             fn_args[param_name] = arg
-    fn(**fn_args)
+    return fn(**fn_args)
