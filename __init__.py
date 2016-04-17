@@ -1,1 +1,1 @@
-from autocli import autocli
+from .auto_cli import auto_cli
