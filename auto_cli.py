@@ -40,7 +40,7 @@ def auto_cli(live_vars, src_file):
         else:
             opt_group.add_argument(_to_option(name), help=help)
     args = arg_parser.parse_args()
-    fn = live_vars[args.op]
+    fn = live_vars[getattr(args, '_op')]
     fn_args = {}
     for param_name, parameter in signature(fn).parameters.items():
         arg = getattr(args, param_name)
